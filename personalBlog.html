@@ -1,23 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-      <title>Blog <section></section></title>  
-        <link rel="stylesheet" href="file:///Users/zebibgetaneh/Desktop/project2/personalblog.css"/> 
-        <link rel="shortcut icon" href="file:///Users/zebibgetaneh/Desktop/CSS project/">
-    </head> 
-    <body>
-        <section id="blog">
-        <div class="blog-heding">
-
-        <samp>my post </span>
-        <h3>my blog</h3>
-        </div> class="blog-container"
-        <div class="blog-box">
-            <img src="images/galerya/file:///Users/zebibgetaneh/Desktop/CSS project/" alt="blog">
-            </div>
+  <head>
+    <title>My Blog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      header .subscribe-form {
+        display: flex;
+        align-items: center;
+      }
+      header .subscribe-form input {
+        border: none;
+        background-color: #555;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+      }
+      header .subscribe-form button {
+        border: none;
+        background-color: #555;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      header .menu {
+        display: flex;
+        align-items: center;
+      }
+      header .menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 18px;
+      }
+      header .menu a:last-of-type {
+        margin-right: 0;
+      }
+      header .menu a:hover {
+        color: #888;
+      }
+      #main {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        place-items: center;
+        margin: 100px;
+      }
+      #blog-list {
+        margin-right: 20px;
+        flex: 1;
+      }
+      #blog-list h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+      #blog-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #blog-list li {
+        margin: 10px 0;
+      }
+      #recent-posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: -200px;
+      }
+      #recent-posts h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+      #recent-posts ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .left-side {
+        display: flex;
+        flex-direction: column;
+        column-gap: 100px;
+      }
+      #recent-posts li {
+        margin: 10px 0;
+      }
+      @media (max-width: 768px) {
+        #main {
+          grid-template-columns: 1fr;
+        }
+        #recent-posts {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          margin-top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Blog</h1>
+      <div class="subscribe-form">
+        <input type="text" placeholder="Enter your email" />
+        <button>Subscribe</button>
+      </div>
+      <div class="menu">
+        <a href="#">Blogs</a>
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </header>
+    <div id="main">
+      <div id="blog-list">
+        <h2>Blog Posts</h2>
+        <ul>
+          <h3>Test Title</h3>
+          <li>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              interdum, urna at suscipit mollis, justo diam posuere dolor, in
+              fermentum nibh nisi non enim. Fusce eget diam tincidunt, viverra
+              diam sit amet, tincidunt arcu. Aliquam nec placerat risus, a
+              tincidunt massa. Pellentesque hendrerit diam at massa pellentesque
+              rutrum. Ut quis lectus non diam posuere aliquet. Aliquam erat
+              volutpat. In hac habitasse platea dictumst.</span
+            >
+          </li>
+          <li><a href="#">Like</a></li>
+          <li><a href="#">Comment</a></li>
+        </ul>
+        <ul>
+          <h3>Test Title</h3>
+          <li>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              interdum, urna at suscipit mollis, justo diam posuere dolor, in
+              fermentum nibh nisi non enim. Fusce eget diam tincidunt, viverra
+              diam sit amet, tincidunt arcu. Aliquam nec placerat risus, a
+              tincidunt massa. Pellentesque hendrerit diam at massa pellentesque
+              rutrum. Ut quis lectus non diam posuere aliquet. Aliquam erat
+              volutpat. In hac habitasse platea dictumst.</span
+            >
+          </li>
+          <li><a href="#">Like</a></li>
+          <li><a href="#">Comment</a></li>
+        </ul>
+        <ul>
+          <h3>Test Title</h3>
+          <li>
+            <span
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              interdum, urna at suscipit mollis, justo diam posuere dolor, in
+              fermentum nibh nisi non enim. Fusce eget diam tincidunt, viverra
+              diam sit amet, tincidunt arcu. Aliquam nec placerat risus, a
+              tincidunt massa. Pellentesque hendrerit diam at massa pellentesque
+              rutrum. Ut quis lectus non diam posuere aliquet. Aliquam erat
+              volutpat. In hac habitasse platea dictumst.</span
+            >
+          </li>
+          <li><a href="#">Like</a></li>
+          <li><a href="#">Comment</a></li>
+        </ul>
+      </div>
+      <div class="left-side">
+        <div id="recent-posts">
+          <h2>Recent Posts</h2>
+          <ul>
+            <li><a href="#">Recent post 1</a></li>
+            <li><a href="#">Recent post 2</a></li>
+            <li><a href="#">Recent post 3</a></li>
+          </ul>
         </div>
-
-    </section>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
